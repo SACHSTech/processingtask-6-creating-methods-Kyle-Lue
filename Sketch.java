@@ -42,10 +42,6 @@ public class Sketch extends PApplet {
     window();
   }
   // define other methods down here.
-  private void rect(int a, int b, int c, int d){
-    rect(a, b, c, d);
-
-  }
   private void colour(int a, int b, int c){
     fill(a, b, c);
   }
