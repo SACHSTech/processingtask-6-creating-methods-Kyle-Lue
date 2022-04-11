@@ -23,14 +23,55 @@ public class Sketch extends PApplet {
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+	  //Creating the ground and the colour it will be 
+    ground();
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+    //Creating the sun 
+    sun();
+
+    //Creating the house body and colour 
+    house();
+
+    //Creating the roof and colour of roof
+    roof();
+    
+    //Creating door
+    door();
+
+    //Creating windows
+    window();
   }
-  
   // define other methods down here.
+  private void colour(int a, int b, int c){
+    fill(a, b, c);
+  }
+  private void sun(){
+     colour(247,247,73);
+     ellipse(65,65,90,90);
+  }
+  private void house(){
+    colour(188,74,60);
+    rect(175,175,150,150);
+  }
+  private void roof(){
+    colour(109,114,124);
+    triangle(150,175,250,100,350,175);
+  }
+  private void ground(){
+    colour(0,154,23);
+    rect(0,300,400,100);
+  }
+  private void door(){
+    colour(186,140,99);
+    rect(232,265,40,60);
+  }
+  private void window(){
+    colour(199,227,225);
+    rect(190,200,30,30);
+    rect(282,200,30,30);
+    line(190,215,220,215);
+    line(205,200,205,230);
+    line(282,215,312,215);
+    line(297,200,297,230);
+  }
 }
